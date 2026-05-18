@@ -1,0 +1,606 @@
+:root {
+  color: #17202a;
+  background: #f5f7fa;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  align-items: center;
+  background: #1f7a68;
+  border: 0;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 14px;
+}
+
+input,
+select,
+textarea {
+  background: white;
+  border: 1px solid #d6dde7;
+  border-radius: 8px;
+  color: #17202a;
+  min-height: 42px;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+textarea {
+  min-height: 78px;
+  resize: vertical;
+}
+
+.centered,
+.auth-page {
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  padding: 24px;
+}
+
+.auth-page {
+  background: linear-gradient(135deg, #102a43, #1f7a68 54%, #f0b429);
+}
+
+.auth-panel {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 8px;
+  box-shadow: 0 24px 80px rgba(16, 42, 67, 0.28);
+  max-width: 440px;
+  padding: 32px;
+  width: 100%;
+}
+
+.auth-panel h1,
+.topbar h1 {
+  letter-spacing: 0;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.stack,
+.project-form,
+.task-form,
+.member-form {
+  display: grid;
+  gap: 10px;
+}
+
+.link-button {
+  background: transparent;
+  color: #1f7a68;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.notice {
+  background: #fff7e6;
+  border: 1px solid #f4c95d;
+  border-radius: 8px;
+  color: #5f4100;
+  margin: 14px 0 0;
+  padding: 10px 12px;
+}
+
+.form-help {
+  color: #627d98;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 10px 0 0;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #102a43;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+}
+
+.brand,
+.user-pill {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  font-weight: 800;
+}
+
+.project-list {
+  display: grid;
+  gap: 8px;
+}
+
+.project-list button,
+.logout {
+  background: rgba(255, 255, 255, 0.1);
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.project-list button.active {
+  background: #f0b429;
+  color: #17202a;
+}
+
+.logout {
+  margin-top: auto;
+}
+
+.workspace {
+  padding: 28px;
+}
+
+.topbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.eyebrow {
+  color: #627d98;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.user-pill {
+  background: white;
+  border: 1px solid #d6dde7;
+  border-radius: 999px;
+  padding: 10px 14px;
+}
+
+.metrics {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 24px 0;
+}
+
+.metric {
+  align-items: center;
+  background: white;
+  border: 1px solid #d6dde7;
+  border-radius: 8px;
+  display: grid;
+  gap: 6px;
+  min-height: 120px;
+  padding: 18px;
+}
+
+.metric svg {
+  color: #1f7a68;
+}
+
+.metric span {
+  color: #627d98;
+}
+
+.metric strong {
+  font-size: 2rem;
+}
+
+.content-grid {
+  align-items: start;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.7fr);
+}
+
+.panel {
+  background: white;
+  border: 1px solid #d6dde7;
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.panel-heading {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.panel-heading h2 {
+  margin: 0;
+}
+
+.panel-heading span {
+  color: #627d98;
+}
+
+.task-form {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 16px;
+}
+
+.task-form textarea,
+.task-form button {
+  grid-column: span 2;
+}
+
+.task-list,
+.member-list {
+  display: grid;
+  gap: 12px;
+}
+
+.task-card,
+.member-row {
+  border: 1px solid #d6dde7;
+  border-left: 5px solid #1f7a68;
+  border-radius: 8px;
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+}
+
+.task-card h3 {
+  margin: 0 0 6px;
+}
+
+.task-card p {
+  color: #627d98;
+  margin: 0;
+}
+
+.priority-high {
+  border-left-color: #c2410c;
+}
+
+.priority-medium {
+  border-left-color: #f0b429;
+}
+
+.priority-low {
+  border-left-color: #1f7a68;
+}
+
+.task-meta,
+.member-row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.task-meta span,
+.member-row span {
+  color: #627d98;
+  font-size: 0.92rem;
+}
+
+.role {
+  background: #e6fffa;
+  border-radius: 999px;
+  color: #1f7a68 !important;
+  font-weight: 800;
+  padding: 6px 10px;
+}
+
+@media (max-width: 900px) {
+  .app-shell,
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    min-height: auto;
+  }
+
+  .metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .workspace,
+  .sidebar {
+    padding: 18px;
+  }
+
+  .topbar,
+  .panel-heading,
+  .member-row,
+  .task-meta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .metrics,
+  .task-form {
+    grid-template-columns: 1fr;
+  }
+
+  .task-form textarea,
+  .task-form button {
+    grid-column: auto;
+  }
+}
+.task-card {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 16px;
+  border-left: 6px solid #0f172a;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.priority-low {
+  border-left-color: #22c55e;
+}
+
+.priority-medium {
+  border-left-color: #f59e0b;
+}
+
+.priority-high {
+  border-left-color: #ef4444;
+}
+
+.task-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.task-top h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.task-top p {
+  color: #64748b;
+  margin-top: 6px;
+}
+
+.task-meta {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+  color: #475569;
+  font-size: 14px;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.task-actions select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  cursor: pointer;
+}
+/* =========================
+   TASK STATUS BADGES
+========================= */
+
+.status-badge {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  width: fit-content;
+  color: white;
+}
+
+.status-badge.todo {
+  background: #ef4444;
+}
+
+.status-badge.in_progress {
+  background: #f59e0b;
+}
+
+.status-badge.done {
+  background: #22c55e;
+}
+
+/* =========================
+   DELETE BUTTON
+========================= */
+
+.delete-task-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-weight: 600;
+}
+
+.delete-task-btn:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   TASK CARD HOVER
+========================= */
+
+.task-card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   PROJECT BUTTONS
+========================= */
+
+.project-list button {
+  transition: 0.2s ease;
+}
+
+.project-list button:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+/* =========================
+   BUTTON HOVER
+========================= */
+
+button {
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.95;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* =========================
+   EMPTY TASK STATE
+========================= */
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #64748b;
+}
+
+.empty-state h3 {
+  margin-bottom: 10px;
+}
+
+/* =========================
+   TASK LIST
+========================= */
+
+.task-list {
+  margin-top: 20px;
+}
+
+/* =========================
+   TASK ACTIONS MOBILE
+========================= */
+
+@media (max-width: 640px) {
+  .task-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .delete-task-btn {
+    width: 100%;
+  }
+
+  .task-actions select {
+    width: 100%;
+  }
+
+  .task-top {
+    flex-direction: column;
+  }
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* =========================
+   NICE ANIMATIONS
+========================= */
+
+.metric,
+.panel,
+.task-card,
+.project-list button {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.project-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-btn {
+  flex: 1;
+}
+
+.delete-project-btn {
+  background: #ef4444;
+  min-width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.delete-project-btn:hover {
+  background: #dc2626;
+}
